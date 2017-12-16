@@ -29,7 +29,7 @@ First, build the Docker container:
 `docker build -t mountless-s3-syncer .`
 
 Now, run the Docker container. Pass in the S3 bucket as an environment variable: 
-`docker run -d -e s3_bucket=mybucketname test`
+`docker run -d -e s3_bucket=mybucketname mountless-s3-syncer`
 
 The Docker container will keep the folder `/data` internally in sync with the passed in S3 bucket's contents. It will log errors to `/errors.log`
 
